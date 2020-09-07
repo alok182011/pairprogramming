@@ -2,10 +2,10 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://alok:alok@programmers.cckh1.mongodb.net/programmers?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose.connect(process.env.mongo_uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -67,7 +67,6 @@ app.post("/programmers", (req, res) => {
         console.log(err);
       } else {
         console.log("done!!!");
-        console.log(programmer);
       }
     }
   );
