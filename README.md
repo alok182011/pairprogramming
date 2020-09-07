@@ -2,4 +2,4 @@
 
 ## Your one to go solution to find pair programmers.
 
-### Visit [Website](pairprogrammer.herokuapp.com)
+### Visit [Website](https://pairprogrammer.herokuapp.com)
