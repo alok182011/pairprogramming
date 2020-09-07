@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programmers</title>
+    <link rel="icon" href="/img/meet.svg" type="image/icon type" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/programmersstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-white">
+      <h1 class="text-center mt-5">Meet Some Awesome Devs</h1>
+      <section class="box mt-5">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-lg-4 text-white showcase-img m-auto text-center">
+              <img src="/img/meet.svg" />
+            </div>
+            <div class="col-lg-8 text-center mt-auto mb-auto p-5">
+              <h4 class="mb-5 text-justify">
+                You can have a look at the works of programmers through their
+                github id.
+              </h4>
+              <h4 class="text-justify">
+                Then you can reach out to any programmer through mail with a
+                request to become your pair programmer.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="cards" class="mt-5">
+        <% programmer.forEach((aprogrammer)=>{ %>
+        <li>
+          <div class="card">
+            <h3 class="text-center mt-5 mb-5"><%=aprogrammer.name%></h3>
+            <h5 class="ml-4 text-white-50">
+              Country : <%=aprogrammer.country%>
+            </h5>
+            <h5 class="ml-4 text-white-50">Stack : <%=aprogrammer.stack%></h5>
+            <h5 class="ml-4 text-white-50">
+              Experience : <%=aprogrammer.experience%>
+            </h5>
+            <h5 class="ml-4 text-white-50">Mail : <%=aprogrammer.mail%></h5>
+            <h5 class="ml-4 text-white-50">
+              Github Id : <%=aprogrammer.github%>
+            </h5>
+          </div>
+        </li>
+        <%});%>
+      </div>
+      <a class="btn btn-outline-info mt-5 mb-5" href="/">Home</a>
+    </div>
+  </body>
+</html>

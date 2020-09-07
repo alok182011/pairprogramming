@@ -1,0 +1,11 @@
+#anim {
+  height: 350px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background: black;
+  font-family: "Amita", cursive;
+}
